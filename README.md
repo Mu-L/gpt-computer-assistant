@@ -45,11 +45,14 @@ Powered by <a href="https://github.com/Upsonic/Tiger"><strong>Upsonic Tiger 🐅
 
 
 
-## Installation and Run
-Needed >= Python 3.9
+## Install and run
+*Python 3.9 or higher is required
+
 ```console
-pip3 install 'gpt-computer-assistant[base]'
+pip install 'gpt-computer-assistant[base]'
 ```
+
+To run gpt-computer-assistant, simply type
 
 ```console
 computerassistant
@@ -116,6 +119,19 @@ We have added Pvporcupine integration. To use it, you need to install an additio
 ```console
 pip3 install 'gpt-computer-assistant[wakeword]'
 ```
+</details>
+
+### Error Solutions
+<details>
+
+#### Setuptools
+
+```console
+pip install setuptools --upgrade
+```
+
+</details>
+
 
 After that, please enter your [Pvporcupine](https://picovoice.ai/) API key and enable the wake word feature.
 </details>
@@ -246,6 +262,22 @@ def hobbies():
     return "Tennis, volleyball, and swimming."
 
 
+# Create an operation, it will inform the user with top bar animation
+with remote.operation("Scanning")
+  remote.wait(5)
+
+
+
+color_name = remote.ask("What is your favorite color")
+
+
+remote.set_background_color(255, 255, 255)
+remote.set_opacity(200)
+
+remote.set_border_radius(3)
+
+remote.collapse()
+remote.expand()
 ```
 
 
@@ -315,6 +347,8 @@ def hobbies():
 | **Adding more capability on device**              | Completed     | Q2 2024        |
 | **Local TTS**              | Completed     | Q3 2024        |
 | **Local STT**              | Completed     | Q3 2024        |
+| Tray Menu              | Completed     | Q3 2024        |
+| **Global Hotkey**              | On the way     | Q3 2024        |
 | DeepFace Integration (Facial Recognition)                    | Planned  | Q3 2024        |
 
 
